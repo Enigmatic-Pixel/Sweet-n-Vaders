@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="scripts/app.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Orbitron&display=swap"
+    rel="stylesheet">
+  <title>Project 1</title>
+</head>
+
+<body>
+  <header>
+    <h1>Space Invaders</h1>
+    <h2 id='controls'>controls</h2>
+    <div id='wsad'>
+      <button id='w'>W</button>
+      <div id='middleControls'>
+        <button id='a'>A</button>
+        <button>S</button>
+        <button id='d'>D</button>
+      </div>
+      <p id='intructions'>
+        Hold down key or hover over letter <br /><br />
+        Game increases in difficulty with each win
+      </p>
+    </div>
+    <button id='start'>Start Game</button>
+  </header>
+
+  <main>
+    <h1>Space Invaders</h1>
+    <section class='pageText'>
+      <h2>Lives: <span id='lives'>0</span>
+        <div id='heartOne'></div>
+        <div id='heartTwo'></div>
+        <div id='heartThree'></div>
+      </h2>
+      <h2>Score: <span id='score'>0</span></h2>
+    </section>
+    <div class="grid"></div>
+    <section class='gameOver'>
+      <h3>Game Over!</h3>
+      <h3 id='wave'></h3>
+      <p id='tryAgain'></p>
+      <button id='restart'>Restart</button>
+      <p id='countDown'>3</p>
+    </section>
+  </main>
+</body>
+
+</html>
+
+
+
+
