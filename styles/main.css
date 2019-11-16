@@ -283,3 +283,10 @@ h3 {
 #wave {
   display: none;
 }
+
+#spacebar {
+  width: 260px;
+  margin-top: 10px;
+  text-align: center;
+  padding: 0;
+}

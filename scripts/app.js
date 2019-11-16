@@ -40,17 +40,17 @@ function setupGame() {
   const titlePage = document.querySelector('header')
   const gamePage = document.querySelector('main')
   const startButton = document.querySelector('#start')
-  const wButton = document.querySelector('#w')
   const aButton = document.querySelector('#a')
   const dButton = document.querySelector('#d')
+  const spacebarButton = document.querySelector('#spacebar')
 
-  wButton.addEventListener('mouseover', () => {
-    wButton.classList.add('hover')
-    wButton.innerHTML = 'Shoots Bullet'
+  spacebarButton.addEventListener('mouseover', () => {
+    spacebarButton.classList.add('hover')
+    spacebarButton.innerHTML = 'Shoots Bullet'
   })
-  wButton.addEventListener('mouseout', () => {
-    wButton.classList.remove('hover')
-    wButton.innerHTML = 'W'
+  spacebarButton.addEventListener('mouseout', () => {
+    spacebarButton.classList.remove('hover')
+    spacebarButton.innerHTML = 'Spacebar'
   })
 
   aButton.addEventListener('mouseout', () => {
@@ -85,9 +85,9 @@ function setupGame() {
   })
 
   document.addEventListener('keydown', (e) => {
-    if (e.keyCode === 87) {
-      wButton.classList.add('hover')
-      wButton.innerHTML = 'Shoots Bullet'
+    if (e.keyCode === 32) {
+      spacebarButton.classList.add('hover')
+      spacebarButton.innerHTML = 'Shoots Bullet'
     }
     if (e.keyCode === 65) {
       aButton.classList.add('hover')
@@ -100,8 +100,8 @@ function setupGame() {
   })
 
   document.addEventListener('keyup', () => {
-    wButton.classList.remove('hover')
-    wButton.innerHTML = 'W'
+    spacebarButton.classList.remove('hover')
+    spacebarButton.innerHTML = 'Spacebar'
     aButton.classList.remove('hover')
     aButton.innerHTML = 'A'
     dButton.classList.remove('hover')
@@ -134,8 +134,8 @@ function setupGame() {
   let newBullet = ship - width
 
   document.addEventListener('keyup', (e) => {
-    switch (e.key) {
-      case 'a': {
+    switch (e.keyCode) {
+      case 65: {
         if (ship === 600) {
           return
         }
@@ -144,7 +144,7 @@ function setupGame() {
         cells[ship].classList.add('ship')
         break
       }
-      case 'd': {
+      case 68: {
         if (ship === 624) {
           return
         }
@@ -153,7 +153,7 @@ function setupGame() {
         cells[ship].classList.add('ship')
         break
       }
-      case 'w': {
+      case 32: {
         bullet = ship - width
         cells[bullet].classList.add('bullet')
         bulletArrayOfArrays.push([bullet])
