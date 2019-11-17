@@ -419,6 +419,7 @@ function setupGame() {
   const winnerContent = document.querySelector('#tryAgain')
   const pageText = document.querySelector('.pageText')
   const waveShown = document.querySelector('#wave')
+  const header = document.querySelector('#gameHeader')
 
   function checkGameOver() {
     if (lives <= 0) {
@@ -439,6 +440,7 @@ function setupGame() {
 
     if (result === 'loss') {
       grid.style.display = 'none'
+      header.style.marginTop = '10%'
       pageText.style.marginBottom = '700px'
       winnerContent.innerHTML = 'You lost, try again!'
       winnerTitle.innerHTML = 'Game Over!'
@@ -447,6 +449,7 @@ function setupGame() {
       gameEnd.style.display = 'flex'
     } else if (result === 'win') {
       grid.style.display = 'none'
+      header.style.marginTop = '10%'
       pageText.style.marginBottom = '700px'
       winnerTitle.innerHTML = 'Congratulations!'
       winnerContent.innerHTML = 'You win, play again!'
@@ -504,6 +507,7 @@ function setupGame() {
     }, 5000)
 
     setTimeout(() => {
+      header.style.marginTop = '1%'
       waveShown.style.display = 'none'
       restartButton.style.display = 'block'
       pageText.style.marginBottom = ''
