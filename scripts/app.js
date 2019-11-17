@@ -443,6 +443,7 @@ function setupGame() {
       winnerContent.innerHTML = 'You lost, try again!'
       winnerTitle.innerHTML = 'Game Over!'
       winnerTitle.style.fontSize = '80px'
+      restartButton.innerHTML = 'Restart'
       gameEnd.style.display = 'flex'
     } else if (result === 'win') {
       grid.style.display = 'none'
@@ -450,6 +451,7 @@ function setupGame() {
       winnerTitle.innerHTML = 'Congratulations!'
       winnerContent.innerHTML = 'You win, play again!'
       winnerTitle.style.fontSize = '70px'
+      restartButton.innerHTML = 'Next wave'
       gameEnd.style.display = 'flex'
     }
   }
