@@ -1,7 +1,7 @@
 # Project-1: Space Invaders
 
 ## Overview
-Link to [GitHub Pages](https://charlotte-thomas.github.io/project-1/)
+Link to [GitHub Pages](https://Enigmatic-Pixel.github.io/project-2/)
 
 ## Brief
 
