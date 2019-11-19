@@ -273,7 +273,7 @@ function setupGame() {
 
   let random = 6
   let bombsInPlay = 0
-  let bombWave = 5
+  let bombWave = 3
 
   setInterval(() => {
     if (aliens.length > 0) {
@@ -326,6 +326,7 @@ function setupGame() {
 
   let direction = 'right'
   let moveDown = true
+  let right = true
 
   function rightColumnOccupied() {
     return rightColumn.some((i) => {
@@ -364,19 +365,20 @@ function setupGame() {
     }
   }, 500)
 
-
   function calculateDirection() {
     if (rightColumnOccupied() && moveDown) {
       direction = 'down'
       moveDown = false
-    } else if (rightColumnOccupied() && !moveDown) {
-      direction = 'left'
+      right = false
+    } else if (right && !moveDown) {
+      direction = 'right'
       moveDown = true
     } else if (leftColumnOccupied() && moveDown) {
       direction = 'down'
       moveDown = false
-    } else if (leftColumnOccupied() && !moveDown) {
-      direction = 'right'
+      right = true
+    } else if (!right && !moveDown) {
+      direction = 'left'
       moveDown = true
     }
   }
@@ -424,7 +426,8 @@ function setupGame() {
   function checkGameOver() {
     if (lives <= 0) {
       lives = 0
-      points = 0
+      points -= 30
+      scoreShown.innerHTML = points
       gameOver = true
       result = 'loss'
       console.log('You loose')
