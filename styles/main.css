@@ -203,7 +203,7 @@ h2 {
 }
 .grid div.explosion {
   background-image: url(../images/boom2.png);
-  background-size: 150%;
+  background-size: 150a %;
   background-repeat: no-repeat;
   background-position: center;
 }
